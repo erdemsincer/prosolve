@@ -1,0 +1,30 @@
+version: "3.9"
+services:
+  pg-identity:
+    image: postgres:16
+    environment:
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: identity
+    ports:
+      - "5437:5432"
+    volumes:
+      - pg_identity:/var/lib/postgresql/data
+
+  identity-api:
+    build:
+      context: ../src/services/IdentityService
+      dockerfile: IdentityService.Api/Dockerfile
+    environment:
+      ASPNETCORE_ENVIRONMENT: "Development"
+      ConnectionStrings__Default: "Host=pg-identity;Port=5432;Database=identity;Username=postgres;Password=postgres"
+      Jwt__Issuer: "prosolve.identity"
+      Jwt__Audience: "prosolve.clients"
+      Jwt__Key: "DEV_SUPER_SECRET_CHANGE_MEDEV_SUPER_SECRET_CHANGE_MEDEV_SUPER_SECRET_CHANGE_ME"
+      Jwt__AccessMinutes: "30"
+      Jwt__RefreshDays: "14"
+    depends_on:
+      - pg-identity
+    ports:
+      - "5181:8080"
+volumes:
+  pg_identity: {}

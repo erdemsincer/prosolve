@@ -1,0 +1,15 @@
+D:\Project\ProSolve\src\services\IdentityService\IdentityService.Application\bin\Debug\net9.0\IdentityService.Application.deps.json
+D:\Project\ProSolve\src\services\IdentityService\IdentityService.Application\bin\Debug\net9.0\IdentityService.Application.dll
+D:\Project\ProSolve\src\services\IdentityService\IdentityService.Application\bin\Debug\net9.0\IdentityService.Application.pdb
+D:\Project\ProSolve\src\services\IdentityService\IdentityService.Application\bin\Debug\net9.0\IdentityService.Domain.dll
+D:\Project\ProSolve\src\services\IdentityService\IdentityService.Application\bin\Debug\net9.0\IdentityService.Domain.pdb
+D:\Project\ProSolve\src\services\IdentityService\IdentityService.Application\obj\Debug\net9.0\IdentityService.Application.csproj.AssemblyReference.cache
+D:\Project\ProSolve\src\services\IdentityService\IdentityService.Application\obj\Debug\net9.0\IdentityService.Application.GeneratedMSBuildEditorConfig.editorconfig
+D:\Project\ProSolve\src\services\IdentityService\IdentityService.Application\obj\Debug\net9.0\IdentityService.Application.AssemblyInfoInputs.cache
+D:\Project\ProSolve\src\services\IdentityService\IdentityService.Application\obj\Debug\net9.0\IdentityService.Application.AssemblyInfo.cs
+D:\Project\ProSolve\src\services\IdentityService\IdentityService.Application\obj\Debug\net9.0\IdentityService.Application.csproj.CoreCompileInputs.cache
+D:\Project\ProSolve\src\services\IdentityService\IdentityService.Application\obj\Debug\net9.0\Identity.52144512.Up2Date
+D:\Project\ProSolve\src\services\IdentityService\IdentityService.Application\obj\Debug\net9.0\IdentityService.Application.dll
+D:\Project\ProSolve\src\services\IdentityService\IdentityService.Application\obj\Debug\net9.0\refint\IdentityService.Application.dll
+D:\Project\ProSolve\src\services\IdentityService\IdentityService.Application\obj\Debug\net9.0\IdentityService.Application.pdb
+D:\Project\ProSolve\src\services\IdentityService\IdentityService.Application\obj\Debug\net9.0\ref\IdentityService.Application.dll
