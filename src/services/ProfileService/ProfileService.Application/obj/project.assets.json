@@ -1,0 +1,201 @@
+{
+  "version": 3,
+  "targets": {
+    "net9.0": {
+      "FluentValidation/12.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0/FluentValidation.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/FluentValidation.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "MediatR/11.1.0": {
+        "type": "package",
+        "dependencies": {
+          "MediatR.Contracts": "1.0.1"
+        },
+        "compile": {
+          "lib/netstandard2.1/MediatR.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.1/MediatR.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "MediatR.Contracts/1.0.1": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/MediatR.Contracts.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/MediatR.Contracts.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "ProfileService.Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "compile": {
+          "bin/placeholder/ProfileService.Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ProfileService.Domain.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "FluentValidation/12.0.0": {
+      "sha512": "8NVLxtMUXynRHJIX3Hn1ACovaqZIJASufXIIFkD0EUbcd5PmMsL1xUD5h548gCezJ5BzlITaR9CAMrGe29aWpA==",
+      "type": "package",
+      "path": "fluentvalidation/12.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "README.md",
+        "fluent-validation-icon.png",
+        "fluentvalidation.12.0.0.nupkg.sha512",
+        "fluentvalidation.nuspec",
+        "lib/net8.0/FluentValidation.dll",
+        "lib/net8.0/FluentValidation.xml"
+      ]
+    },
+    "MediatR/11.1.0": {
+      "sha512": "YIbtrLOyeCuIv8vIuHL/mMdls5xmgS36pIOJDxKZuu55nxA2MI2Z+E/Uk0z+F/LE11AGmpjplOM0NZ91m5LQBA==",
+      "type": "package",
+      "path": "mediatr/11.1.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "gradient_128x128.png",
+        "lib/netstandard2.1/MediatR.dll",
+        "lib/netstandard2.1/MediatR.xml",
+        "mediatr.11.1.0.nupkg.sha512",
+        "mediatr.nuspec"
+      ]
+    },
+    "MediatR.Contracts/1.0.1": {
+      "sha512": "NsRvOxthhkYml4DcBMyJsmym8C4MchioH7wxKVPEg7plFj9Euh/i4IcmZ3Gvgx6+K8obeuhPeJdoBl56wnuo3A==",
+      "type": "package",
+      "path": "mediatr.contracts/1.0.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "gradient_128x128.png",
+        "lib/net461/MediatR.Contracts.dll",
+        "lib/net461/MediatR.Contracts.xml",
+        "lib/netstandard2.0/MediatR.Contracts.dll",
+        "lib/netstandard2.0/MediatR.Contracts.xml",
+        "mediatr.contracts.1.0.1.nupkg.sha512",
+        "mediatr.contracts.nuspec"
+      ]
+    },
+    "ProfileService.Domain/1.0.0": {
+      "type": "project",
+      "path": "../ProfileService.Domain/ProfileService.Domain.csproj",
+      "msbuildProject": "../ProfileService.Domain/ProfileService.Domain.csproj"
+    }
+  },
+  "projectFileDependencyGroups": {
+    "net9.0": [
+      "FluentValidation >= 12.0.0",
+      "MediatR >= 11.1.0",
+      "ProfileService.Domain >= 1.0.0"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\Erdem\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "D:\\Project\\ProSolve\\src\\services\\ProfileService\\ProfileService.Application\\ProfileService.Application.csproj",
+      "projectName": "ProfileService.Application",
+      "projectPath": "D:\\Project\\ProSolve\\src\\services\\ProfileService\\ProfileService.Application\\ProfileService.Application.csproj",
+      "packagesPath": "C:\\Users\\Erdem\\.nuget\\packages\\",
+      "outputPath": "D:\\Project\\ProSolve\\src\\services\\ProfileService\\ProfileService.Application\\obj\\",
+      "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
+      "configFilePaths": [
+        "C:\\Users\\Erdem\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+      ],
+      "originalTargetFrameworks": [
+        "net9.0"
+      ],
+      "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "net9.0": {
+          "targetAlias": "net9.0",
+          "projectReferences": {
+            "D:\\Project\\ProSolve\\src\\services\\ProfileService\\ProfileService.Domain\\ProfileService.Domain.csproj": {
+              "projectPath": "D:\\Project\\ProSolve\\src\\services\\ProfileService\\ProfileService.Domain\\ProfileService.Domain.csproj"
+            }
+          }
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      },
+      "restoreAuditProperties": {
+        "enableAudit": "true",
+        "auditLevel": "low",
+        "auditMode": "direct"
+      },
+      "SdkAnalysisLevel": "9.0.300"
+    },
+    "frameworks": {
+      "net9.0": {
+        "targetAlias": "net9.0",
+        "dependencies": {
+          "FluentValidation": {
+            "target": "Package",
+            "version": "[12.0.0, )"
+          },
+          "MediatR": {
+            "target": "Package",
+            "version": "[11.1.0, )"
+          }
+        },
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48",
+          "net481"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "frameworkReferences": {
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          }
+        },
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.301/PortableRuntimeIdentifierGraph.json"
+      }
+    }
+  }
+}
