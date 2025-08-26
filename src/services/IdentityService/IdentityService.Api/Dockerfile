@@ -1,7 +1,7 @@
 FROM mcr.microsoft.com/dotnet/sdk:9.0 AS build
 WORKDIR /src
 COPY . .
-WORKDIR /src/IdentityService.Api
+WORKDIR /src/services/IdentityService/IdentityService.Api
 RUN dotnet restore IdentityService.Api.csproj
 RUN dotnet publish IdentityService.Api.csproj -c Release -o /app
 
