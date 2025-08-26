@@ -12,8 +12,8 @@ services:
 
   identity-api:
     build:
-      context: ../src/services/IdentityService
-      dockerfile: IdentityService.Api/Dockerfile
+      context: ../src
+      dockerfile: services/IdentityService/IdentityService.Api/Dockerfile
     environment:
       ASPNETCORE_ENVIRONMENT: "Development"
       ConnectionStrings__Default: "Host=pg-identity;Port=5432;Database=identity;Username=postgres;Password=postgres"
@@ -26,5 +26,44 @@ services:
       - pg-identity
     ports:
       - "5181:8080"
+
+  pg-profile:
+    image: postgres:16
+    environment:
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: profile
+    ports:
+      - "5438:5432"
+    volumes:
+      - pg_profile:/var/lib/postgresql/data
+
+  profile-api:
+    build:
+      context: ../src
+      dockerfile: services/ProfileService/ProfileService.Api/Dockerfile
+    environment:
+      ASPNETCORE_ENVIRONMENT: "Development"
+      ConnectionStrings__Default: "Host=pg-profile;Port=5432;Database=profile;Username=postgres;Password=postgres"
+      Jwt__Issuer: "prosolve.identity"
+      Jwt__Audience: "prosolve.clients"
+      Jwt__Key: "DEV_SUPER_SECRET_CHANGE_MEDEV_SUPER_SECRET_CHANGE_MEDEV_SUPER_SECRET_CHANGE_ME"
+      Jwt__AccessMinutes: "30"
+      Jwt__RefreshDays: "14"
+      Rabbit__Host: "rabbitmq"
+      Rabbit__Username: "guest"
+      Rabbit__Password: "guest"
+    depends_on:
+      - pg-profile
+      - rabbitmq
+    ports:
+      - "5182:8080"
+
+  rabbitmq:
+    image: rabbitmq:3-management
+    ports:
+      - "5672:5672"
+      - "15672:15672"
+
 volumes:
   pg_identity: {}
+  pg_profile: {}
