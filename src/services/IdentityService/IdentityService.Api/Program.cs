@@ -8,7 +8,7 @@ using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
 using Microsoft.OpenApi.Models;
-
+using MassTransit;
 var builder = WebApplication.CreateBuilder(args);
 
 // Swagger + JWT desteği
@@ -65,7 +65,20 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
     });
 
 builder.Services.AddAuthorization();
-
+builder.Services.AddMassTransit(x =>
+{
+    x.UsingRabbitMq((ctx, cfg) =>
+    {
+        var host = builder.Configuration["Rabbit:Host"] ?? "rabbitmq";
+        var user = builder.Configuration["Rabbit:Username"] ?? "guest";
+        var pass = builder.Configuration["Rabbit:Password"] ?? "guest";
+        cfg.Host(host, "/", h =>
+        {
+            h.Username(user);
+            h.Password(pass);
+        });
+    });
+});
 var app = builder.Build();
 
 if (app.Environment.IsDevelopment())
@@ -126,7 +139,7 @@ app.MapPost("/auth/refresh", async (RefreshTokenCommand cmd, IValidator<RefreshT
     }
 });
 
-// Me (authorized)
+
 app.MapGet("/auth/me", (ClaimsPrincipal user) =>
 {
     var sub = user.FindFirstValue(ClaimTypes.NameIdentifier) ?? user.FindFirst("sub")?.Value;
