@@ -1,5 +1,7 @@
 using IdentityService.Application.Abstractions;
+using IdentityService.Application.Abstractions.Events;
 using IdentityService.Application.Abstractions.Security;
+using IdentityService.Infrastructure.EventBus;
 using IdentityService.Infrastructure.Persistence;
 using IdentityService.Infrastructure.Repositories;
 using IdentityService.Infrastructure.Security;
@@ -24,6 +26,7 @@ public static class DependencyInjection
         services.AddScoped<IRefreshTokenRepository, RefreshTokenRepository>();
         services.AddSingleton<IPasswordHasher, BCryptPasswordHasher>();
         services.AddSingleton<ITokenService, JwtTokenService>();
+        services.AddScoped<IUserEvents, UserEventsPublisher>();
         return services;
     }
 }
