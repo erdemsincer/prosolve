@@ -1,0 +1,25 @@
+# .NET build outputs
+bin/
+obj/
+
+# IDE
+.vs/
+.idea/
+.vscode/
+
+# User files
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Build artifacts
+*.dll
+*.pdb
+*.exe
+*.log
+*.sourcelink.json
+*.assets.cache
+*FileListAbsolute.txt
+project.assets.json
+apphost.exe
