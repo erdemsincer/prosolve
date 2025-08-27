@@ -3,6 +3,7 @@ using MediatR;
 using IdentityService.Application.Abstractions;
 using IdentityService.Application.Abstractions.Security;
 using IdentityService.Domain.Users;
+using IdentityService.Application.Abstractions.Events;
 
 namespace IdentityService.Application.Auth;
 
@@ -22,6 +23,7 @@ public sealed class RegisterUserCommandHandler(
     IUserRepository users,
     IRefreshTokenRepository refreshTokens,
     IPasswordHasher hasher,
+    IUserEvents events,
     ITokenService tokens,
     IUnitOfWork uow
 ) : IRequestHandler<RegisterUserCommand, AuthResponse>
@@ -41,6 +43,8 @@ public sealed class RegisterUserCommandHandler(
         await refreshTokens.AddAsync(rt, ct);
 
         await uow.SaveChangesAsync(ct);
+        await uow.SaveChangesAsync(ct);
+        await events.PublishUserRegistered(user, ct);
 
         return new AuthResponse(pair.AccessToken, pair.AccessExpiresAtUtc, pair.RefreshToken, pair.RefreshExpiresAtUtc);
     }
