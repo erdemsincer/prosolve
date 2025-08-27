@@ -150,3 +150,10 @@ D:\Project\ProSolve\src\services\IdentityService\IdentityService.Api\obj\Debug\n
 D:\Project\ProSolve\src\services\IdentityService\IdentityService.Api\obj\Debug\net9.0\IdentityService.Api.pdb
 D:\Project\ProSolve\src\services\IdentityService\IdentityService.Api\obj\Debug\net9.0\IdentityService.Api.genruntimeconfig.cache
 D:\Project\ProSolve\src\services\IdentityService\IdentityService.Api\obj\Debug\net9.0\ref\IdentityService.Api.dll
+D:\Project\ProSolve\src\services\IdentityService\IdentityService.Api\bin\Debug\net9.0\MassTransit.dll
+D:\Project\ProSolve\src\services\IdentityService\IdentityService.Api\bin\Debug\net9.0\MassTransit.Abstractions.dll
+D:\Project\ProSolve\src\services\IdentityService\IdentityService.Api\bin\Debug\net9.0\MassTransit.RabbitMqTransport.dll
+D:\Project\ProSolve\src\services\IdentityService\IdentityService.Api\bin\Debug\net9.0\RabbitMQ.Client.dll
+D:\Project\ProSolve\src\services\IdentityService\IdentityService.Api\bin\Debug\net9.0\ProSolve.Contracts.dll
+D:\Project\ProSolve\src\services\IdentityService\IdentityService.Api\bin\Debug\net9.0\ProSolve.Contracts.pdb
+D:\Project\ProSolve\src\services\IdentityService\IdentityService.Api\obj\Debug\net9.0\IdentityService.Api.sourcelink.json
